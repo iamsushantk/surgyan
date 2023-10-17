@@ -11,9 +11,9 @@
 
 <style scoped>
 	.swars {
-		gap: 10px;
 		display: flex;
 		flex-wrap: wrap;
+		gap: var(--space-xxx);
 		justify-content: center;
 	}
 </style>

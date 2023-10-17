@@ -19,34 +19,34 @@
 
 <style scoped>
 	.swar-order {
-		gap: 5px;
-		padding: 5px;
 		display: flex;
-		border: 2px solid pink;
+		gap: var(--space-xx);
+		padding: var(--space-xx);
+		border: var(--border-x) solid pink;
 	}
 
 	.swar-order__name {
 		display: flex;
-        font-weight: bold;
+		font-weight: bold;
 		place-items: center;
 		background-color: pink;
 	}
 
 	.swar-order__name,
 	.swar-order__tokens {
-		padding: 8px;
+		padding: var(--space-xx);
 	}
 
 	.swar-order__tokens {
-		gap: 5px;
 		display: flex;
 		flex-wrap: wrap;
+		gap: var(--space-xx);
 	}
 
 	.swar-order__token {
-		padding: 5px;
 		flex-grow: 1;
 		text-align: center;
-		border: 2px solid pink;
+		padding: var(--space-x);
+		border: var(--border-x) solid pink;
 	}
 </style>

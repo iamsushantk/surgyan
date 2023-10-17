@@ -18,20 +18,18 @@
 
 <style scoped>
 	.app {
-		gap: 5px;
 		display: flex;
+		gap: var(--space-xx);
 		flex-direction: column;
 	}
 
 	.app__content {
-		padding: 5px;
+		display: flex;
+		gap: var(--space-xx);
+		flex-direction: column;
+		padding: var(--space-xx);
 	}
 
-	.app__content {
-		gap: 5px;
-		display: flex;
-		flex-direction: column;
-	}
 	.app__content-swars {
 		top: 0;
 		position: sticky;

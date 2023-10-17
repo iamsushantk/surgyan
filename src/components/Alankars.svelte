@@ -11,8 +11,8 @@
 
 <style scoped>
 	.alankars {
-		gap: 5px;
 		display: flex;
+		gap: var(--space-xx);
 		flex-direction: column;
 	}
 </style>

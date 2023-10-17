@@ -1,0 +1,11 @@
+:root {
+	--space-x: 2px;
+	--space-xx: 6px;
+	--space-xxx: 10px;
+}
+
+:root {
+	--border-x: 1px;
+	--border-xx: 2px;
+	--border-xxx: 6px;
+}

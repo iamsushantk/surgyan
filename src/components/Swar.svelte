@@ -10,9 +10,9 @@
 
 <style scoped>
 	.swar {
-		padding: 5px;
 		color: white;
 		min-width: 120px;
+		padding: var(--space-xx);
 		background-color: rgb(49, 47, 47);
 	}
 </style>

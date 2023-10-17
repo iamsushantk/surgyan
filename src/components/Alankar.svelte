@@ -23,16 +23,16 @@
 
 <style scoped>
 	.alankar {
-		gap: 5px;
 		display: flex;
+		gap: var(--space-xx);
 		flex-direction: column;
-        border-bottom: 5px solid red;
+		border-bottom: 5px solid red;
 	}
 
 	.alankar__header {
-		padding: 5px;
 		font-weight: bold;
 		text-align: center;
+		padding: var(--space-xx);
 		background-color: pink;
 	}
 

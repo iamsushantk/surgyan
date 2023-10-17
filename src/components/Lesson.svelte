@@ -10,15 +10,15 @@
 
 <style scoped>
 	.lesson {
-		gap: 5px;
 		display: flex;
+		gap: var(--space-xx);
 		flex-direction: column;
 	}
 
 	.lesson__header {
-		padding: 5px;
 		font-weight: bold;
 		text-align: center;
+		padding: var(--space-xx);
 		background-color: pink;
 		border-top-left-radius: 20px;
 		border-top-right-radius: 20px;

@@ -7,19 +7,21 @@
 
 <div class="audio">
 	<audio src={trackUrl} />
-	<div class="audio__name">{trackName}</div>
-	<button class="audio__control fa fa-play" on:click={playAudio}></button>
-	<button class="audio__control fa fa-pause" on:click={pauseAudio}></button>
+	{#if trackName}
+		<div class="audio__name">{trackName}</div>
+	{/if}
+	<button type="button" class="audio__control fa fa-play" on:click={playAudio} />
+	<button type="button" class="audio__control fa fa-pause" on:click={pauseAudio} />
 </div>
 
 <style scoped>
 	.audio {
-		gap: 5px;
-		padding: 5px;
 		display: flex;
 		align-items: center;
+		gap: var(--space-xx);
+		padding: var(--space-xx);
 		justify-content: space-evenly;
-		border: 2px solid pink;
+		border: var(--border-xx) solid pink;
 	}
 
 	.audio__name {
@@ -27,8 +29,13 @@
 	}
 
 	.audio__control {
-		padding: 5px;
+		border: none;
 		cursor: pointer;
+		padding: var(--space-xx);
 		background-color: pink;
+	}
+
+	.audio__control:hover {
+		background-color: lightcoral;
 	}
 </style>
