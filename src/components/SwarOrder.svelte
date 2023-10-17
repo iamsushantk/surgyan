@@ -30,7 +30,6 @@
         font-weight: bold;
 		place-items: center;
 		background-color: pink;
-        text-decoration: underline;
 	}
 
 	.swar-order__name,

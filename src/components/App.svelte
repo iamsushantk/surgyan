@@ -6,7 +6,6 @@
 </script>
 
 <div class="app">
-	<div class="app__header">Alankars</div>
 	<div class="app__content">
 		<div class="app__content-swars">
 			<Swars />
@@ -24,16 +23,8 @@
 		flex-direction: column;
 	}
 
-	.app__header,
 	.app__content {
 		padding: 5px;
-	}
-
-	.app__header {
-		font-weight: bold;
-		text-align: center;
-		background-color: pink;
-		text-transform: uppercase;
 	}
 
 	.app__content {
