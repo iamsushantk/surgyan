@@ -47,6 +47,5 @@
 		padding: 5px;
 		text-align: center;
 		border: 2px solid pink;
-		text-decoration: underline;
 	}
 </style>
