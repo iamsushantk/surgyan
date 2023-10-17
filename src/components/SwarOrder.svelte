@@ -45,6 +45,7 @@
 
 	.swar-order__token {
 		padding: 5px;
+		flex-grow: 1;
 		text-align: center;
 		border: 2px solid pink;
 	}
