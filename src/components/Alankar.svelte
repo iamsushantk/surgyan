@@ -1,24 +1,20 @@
 <script>
 	export let alankar;
 	import Audio from './Audio.svelte';
-	import SwarOrder from './SwarOrder.svelte';
+	import SwarSequence from './SwarSequence.svelte';
 </script>
 
 <div class="alankar">
-	<div class="alankar__header">
+	<div class="header">
 		{'#' + alankar.id}
 	</div>
 	{#if alankar.mediaUrl}
-		<div class="alankar__audio">
+		<div class="audio">
 			<Audio trackName="" trackUrl={alankar.mediaUrl} />
 		</div>
 	{/if}
-	<div class="alankar__aaroh">
-		<SwarOrder name="Aaroh" pattern={alankar.aaroh} />
-	</div>
-	<div class="alankar__avroh">
-		<SwarOrder name="Avroh" pattern={alankar.avroh} />
-	</div>
+	<SwarSequence type="Aaroh" pattern={alankar.aaroh} />
+	<SwarSequence type="Avroh" pattern={alankar.avroh} />
 </div>
 
 <style scoped>
@@ -29,14 +25,14 @@
 		border-bottom: 5px solid red;
 	}
 
-	.alankar__header {
+	.alankar > .header {
 		font-weight: bold;
 		text-align: center;
 		padding: var(--space-xx);
 		background-color: pink;
 	}
 
-	.alankar__audio {
+	.alankar > .audio {
 		display: flex;
 		justify-content: center;
 	}

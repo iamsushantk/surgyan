@@ -8,10 +8,10 @@
 <div class="audio">
 	<audio src={trackUrl} />
 	{#if trackName}
-		<div class="audio__name">{trackName}</div>
+		<div class="name">{trackName}</div>
 	{/if}
-	<button type="button" class="audio__control fa fa-play" on:click={playAudio} />
-	<button type="button" class="audio__control fa fa-pause" on:click={pauseAudio} />
+	<button type="button" class="control fa fa-play" on:click={playAudio} />
+	<button type="button" class="control fa fa-pause" on:click={pauseAudio} />
 </div>
 
 <style scoped>
@@ -24,18 +24,18 @@
 		border: var(--border-xx) solid pink;
 	}
 
-	.audio__name {
+	.audio > .name {
 		font-weight: bold;
 	}
 
-	.audio__control {
+	.audio > .control {
 		border: none;
 		cursor: pointer;
 		padding: var(--space-xx);
 		background-color: pink;
 	}
 
-	.audio__control:hover {
+	.control:hover {
 		background-color: lightcoral;
 	}
 </style>

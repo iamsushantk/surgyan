@@ -4,7 +4,7 @@
 </script>
 
 <div class="lesson">
-	<div class="lesson__header">{lesson.name}</div>
+	<div class="header">{lesson.name}</div>
 	<Alankars alankars={lesson.alankars} />
 </div>
 
@@ -15,7 +15,7 @@
 		flex-direction: column;
 	}
 
-	.lesson__header {
+	.lesson > .header {
 		font-weight: bold;
 		text-align: center;
 		padding: var(--space-xx);

@@ -1,49 +1,49 @@
 <script>
-	export let name;
+	export let type;
 	export let pattern;
-	const tokens = pattern.split('/') || [];
+	const swarGroups = pattern.split('/') || [];
 </script>
 
-<div class="swar-order">
-	<div class="swar-order__name">
-		{name}
+<div class="swar-sequence">
+	<div class="type">
+		{type}
 	</div>
-	<div class="swar-order__tokens">
-		{#each tokens as token}
-			<div class="swar-order__token">
-				{token}
+	<div class="swar-groups">
+		{#each swarGroups as swarGroup}
+			<div class="swar-group">
+				{swarGroup}
 			</div>
 		{/each}
 	</div>
 </div>
 
 <style scoped>
-	.swar-order {
+	.swar-sequence {
 		display: flex;
 		gap: var(--space-xx);
 		padding: var(--space-xx);
 		border: var(--border-x) solid pink;
 	}
 
-	.swar-order__name {
+	.swar-sequence > .type {
 		display: flex;
 		font-weight: bold;
 		place-items: center;
 		background-color: pink;
 	}
 
-	.swar-order__name,
-	.swar-order__tokens {
+	.swar-sequence > .type,
+	.swar-sequence > .swar-groups {
 		padding: var(--space-xx);
 	}
 
-	.swar-order__tokens {
+	.swar-sequence > .swar-groups {
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--space-xx);
 	}
 
-	.swar-order__token {
+	.swar-sequence > .swar-groups > .swar-group {
 		flex-grow: 1;
 		text-align: center;
 		padding: var(--space-x);

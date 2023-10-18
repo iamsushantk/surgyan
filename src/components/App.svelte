@@ -6,11 +6,11 @@
 </script>
 
 <div class="app">
-	<div class="app__content">
-		<div class="app__content-swars">
+	<div class="content">
+		<div class="swars">
 			<Swars />
 		</div>
-		<div class="app__content-lessons">
+		<div class="lessons">
 			<Lessons {lessons} />
 		</div>
 	</div>
@@ -23,14 +23,14 @@
 		flex-direction: column;
 	}
 
-	.app__content {
+	.app > .content {
 		display: flex;
 		gap: var(--space-xx);
 		flex-direction: column;
 		padding: var(--space-xx);
 	}
 
-	.app__content-swars {
+	.app > .content > .swars {
 		top: 0;
 		position: sticky;
 	}
