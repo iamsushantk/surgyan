@@ -4,36 +4,15 @@
 	import SwarSequence from './SwarSequence.svelte';
 </script>
 
-<div class="alankar">
-	<div class="header">
+<div class="flex gap-1 flex-col">
+	<div class="font-bold bg-indigo-800 text-white text-center p-1">
 		{'#' + alankar.id}
 	</div>
 	{#if alankar.mediaUrl}
-		<div class="audio">
+		<div class="flex justify-center">
 			<Audio trackName="" trackUrl={alankar.mediaUrl} />
 		</div>
 	{/if}
 	<SwarSequence type="Aaroh" pattern={alankar.aaroh} />
 	<SwarSequence type="Avroh" pattern={alankar.avroh} />
 </div>
-
-<style scoped>
-	.alankar {
-		display: flex;
-		gap: var(--space-xx);
-		flex-direction: column;
-		border-bottom: 5px solid red;
-	}
-
-	.alankar > .header {
-		font-weight: bold;
-		text-align: center;
-		padding: var(--space-xx);
-		background-color: pink;
-	}
-
-	.alankar > .audio {
-		display: flex;
-		justify-content: center;
-	}
-</style>

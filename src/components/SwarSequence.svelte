@@ -4,49 +4,15 @@
 	const swarGroups = pattern.split('/') || [];
 </script>
 
-<div class="swar-sequence">
-	<div class="type">
+<div class="flex gap-1 border-solid border-2">
+	<div class="type p-1 flex bg-indigo-800 text-white font-bold place-items-center">
 		{type}
 	</div>
-	<div class="swar-groups">
+	<div class="p-1 flex flex-wrap gap-1">
 		{#each swarGroups as swarGroup}
-			<div class="swar-group">
+			<div class="p-0.5 grow border-solid border-2 border-indigo-300 text-center">
 				{swarGroup}
 			</div>
 		{/each}
 	</div>
 </div>
-
-<style scoped>
-	.swar-sequence {
-		display: flex;
-		gap: var(--space-xx);
-		padding: var(--space-xx);
-		border: var(--border-x) solid pink;
-	}
-
-	.swar-sequence > .type {
-		display: flex;
-		font-weight: bold;
-		place-items: center;
-		background-color: pink;
-	}
-
-	.swar-sequence > .type,
-	.swar-sequence > .swar-groups {
-		padding: var(--space-xx);
-	}
-
-	.swar-sequence > .swar-groups {
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--space-xx);
-	}
-
-	.swar-sequence > .swar-groups > .swar-group {
-		flex-grow: 1;
-		text-align: center;
-		padding: var(--space-x);
-		border: var(--border-x) solid pink;
-	}
-</style>

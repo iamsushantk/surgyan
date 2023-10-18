@@ -1,38 +1,20 @@
 <script>
 	import lessons from '../data/lessons';
+	import Swar from './Swar.svelte';
+	import Lesson from './Lesson.svelte';
 
-	import Swars from './Swars.svelte';
-	import Lessons from './Lessons.svelte';
+	const swars = 'D-.N-.S.R.G.M.P.D.N.S+.R+.G+'.split('.');
 </script>
 
-<div class="app">
-	<div class="content">
-		<div class="swars">
-			<Swars />
-		</div>
-		<div class="lessons">
-			<Lessons {lessons} />
-		</div>
+<div class="flex flex-col gap-1">
+	<div class="sticky top-0 flex flex-wrap justify-center gap-2">
+		{#each swars as swar}
+			<Swar {swar} />
+		{/each}
+	</div>
+	<div>
+		{#each lessons as lesson}
+			<Lesson {lesson} />
+		{/each}
 	</div>
 </div>
-
-<style scoped>
-	.app {
-		display: flex;
-		gap: var(--space-xx);
-		flex-direction: column;
-	}
-
-	.app > .content {
-		display: flex;
-		gap: var(--space-xx);
-		flex-direction: column;
-		padding: var(--space-xx);
-	}
-
-	.app > .content > .swars {
-		top: 0;
-		display: none;
-		position: sticky;
-	}
-</style>

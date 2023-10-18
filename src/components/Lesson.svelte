@@ -1,26 +1,11 @@
 <script>
 	export let lesson;
-	import Alankars from './Alankars.svelte';
+	import Alankar from './Alankar.svelte';
 </script>
 
-<div class="lesson">
-	<div class="header">{lesson.name}</div>
-	<Alankars alankars={lesson.alankars} />
+<div class="flex gap-1 flex-col">
+	<div class="p-4 font-bold text-center bg-indigo-800 text-white">{lesson.name}</div>
+	{#each lesson.alankars as alankar}
+		<Alankar {alankar} />
+	{/each}
 </div>
-
-<style scoped>
-	.lesson {
-		display: flex;
-		gap: var(--space-xx);
-		flex-direction: column;
-	}
-
-	.lesson > .header {
-		font-weight: bold;
-		text-align: center;
-		padding: var(--space-xx);
-		background-color: pink;
-		border-top-left-radius: 20px;
-		border-top-right-radius: 20px;
-	}
-</style>
