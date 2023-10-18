@@ -32,6 +32,7 @@
 
 	.app > .content > .swars {
 		top: 0;
+		display: none;
 		position: sticky;
 	}
 </style>
