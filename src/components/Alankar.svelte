@@ -4,8 +4,8 @@
 	import SwarSequence from './SwarSequence.svelte';
 </script>
 
-<div class="flex gap-1 flex-col">
-	<div class="font-bold bg-indigo-800 text-white text-center p-1">
+<div class="flex gap-2 flex-col border-solid border-2 border-indigo-800 p-2">
+	<div class="font-bold bg-indigo-800 rounded text-white text-center p-1">
 		{'#' + alankar.id}
 	</div>
 	{#if alankar.mediaUrl}
