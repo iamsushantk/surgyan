@@ -6,7 +6,7 @@
 	const swarGroups = pattern.split('/') || [];
 </script>
 
-<Div className={'flex gap-1 border-solid border-4 border-pink-500'}>
+<Div className={'flex gap-1 border-solid border-2 border-pink-500'}>
 	<Div className={'type p-1 flex bg-pink-600 text-white font-bold place-items-center'}>
 		{type}
 	</Div>

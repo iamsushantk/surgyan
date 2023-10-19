@@ -2,4 +2,4 @@
 	export let src;
 </script>
 
-<audio controls {src} />
+<audio controls {src} class="w-full" />

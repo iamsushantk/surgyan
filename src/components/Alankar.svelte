@@ -11,7 +11,7 @@
 		{'#' + alankar.id}
 	</Div>
 	{#if alankar.mediaUrl}
-		<Div className={'flex justify-center border-solid border-2 border-pink-500'}>
+		<Div className={'flex justify-center border-solid border-2 border-pink-500 p-1'}>
 			<Audio src={alankar.mediaUrl} />
 		</Div>
 	{/if}
