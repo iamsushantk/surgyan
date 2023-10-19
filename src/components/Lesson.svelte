@@ -1,11 +1,13 @@
 <script>
-	export let lesson;
+	import Div from './Div.svelte';
 	import Alankar from './Alankar.svelte';
+
+	export let lesson;
 </script>
 
-<div class="flex gap-2 border-solid border-0 border-indigo-800 flex-col">
-	<div class="p-4 font-bold text-center bg-indigo-800 text-white">{lesson.name}</div>
+<Div className={'flex gap-2 border-solid border-0 border-pink-600 flex-col'}>
+	<Div className={'p-4 font-bold text-center bg-pink-600 text-white'}>{lesson.name}</Div>
 	{#each lesson.alankars as alankar}
 		<Alankar {alankar} />
 	{/each}
-</div>
+</Div>

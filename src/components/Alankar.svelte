@@ -1,18 +1,20 @@
 <script>
 	export let alankar;
+
 	import Audio from './Audio.svelte';
+	import Div from './Div.svelte';
 	import SwarSequence from './SwarSequence.svelte';
 </script>
 
-<div class="flex gap-2 flex-col border-solid border-2 border-indigo-800 p-2">
-	<div class="font-bold bg-indigo-800 rounded text-white text-center p-1">
+<Div className={'flex gap-2 flex-col border-solid border-2 border-pink-600 p-2'}>
+	<Div className={'font-bold bg-pink-600 rounded text-white text-center p-1'}>
 		{'#' + alankar.id}
-	</div>
+	</Div>
 	{#if alankar.mediaUrl}
-		<div class="flex justify-center">
-			<Audio trackName="" trackUrl={alankar.mediaUrl} />
-		</div>
+		<Div className={'flex justify-center border-solid border-2 border-pink-500'}>
+			<Audio src={alankar.mediaUrl} />
+		</Div>
 	{/if}
 	<SwarSequence type="Aaroh" pattern={alankar.aaroh} />
 	<SwarSequence type="Avroh" pattern={alankar.avroh} />
-</div>
+</Div>

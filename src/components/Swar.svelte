@@ -1,9 +1,11 @@
 <script>
-	export let swar;
+	import Div from './Div.svelte';
 	import Audio from './Audio.svelte';
+
+	export let swar;
 	const getSwarUrl = (swar) => `/data/media/swars/${swar}.mp3`;
 </script>
 
-<div class="bg-indigo-300">
+<Div className={'bg-pink-300'}>
 	<Audio trackName={swar} trackUrl={`${getSwarUrl(swar)}`} />
-</div>
+</Div>

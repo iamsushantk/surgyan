@@ -134,30 +134,18 @@ const lessons = [
 				avroh: 'S+.R+.D.S+/N.S+.P.N/D.N.M.D/P.D.G.P/M.P.R.M/G.M.S.G/R.G.N-.R/S.R.D-.S',
 				mediaUrl:
 					'/data/media/alankars/24573f81-96e8-4456-8646-0f2b4328e435/c70c39eb-bbf6-4d83-8164-d894572d6091.mp4'
-			}
-		]
-	},
-	{
-		id: '3',
-		name: 'Pyramid Alankars (Part 3)',
-		alankars: [
-			{
-				id: '1',
-				aaroh:
-					'S/S.R.S/S.R.G.R.S/S.R.G.M.G.R.S/S.R.G.M.P.M.G.R.S/S.R.G.M.P.D.P.M.G.R.S/S.R.G.M.P.D.N.D.P.M.G.R.S/S.R.G.M.P.D.N.S+.N.D.P.M.G.R.S',
-				avroh:
-					'S.R.G.M.P.D.N.D.P.M.G.R.S/S.R.G.M.P.D.P.M.G.R.S/S.R.G.M.P.M.G.R.S/S.R.G.M.G.R.S/S.R.G.R.S/S.R.S/S',
-				mediaUrl:
-					'/data/media/alankars/24573f81-96e8-4456-8646-0f2b4328e435/ad8032ba-a59c-41a1-bd18-bb8e73ae2c28.mp4'
 			},
 			{
-				id: '2',
-				aaroh:
-					'S+/S+.N.S+/S+.N.D.N.S+/S+.N.D.P.D.N.S+/S+.N.D.P.M.P.D.N.S+/S+.N.D.P.M.G.M.P.D.N.S+/S+.N.D.P.M.G.R.G.M.P.D.N.S+/S+.N.D.P.M.G.R.S.R.G.M.P.D.N.S+',
-				avroh:
-					'S+.N.D.P.M.G.R.G.M.P.D.N.S+/S+.N.D.P.M.G.M.P.D.N.S+/S+.N.D.P.M.P.D.N.S+/S+.N.D.P.D.N.S+/S+.N.D.N.S+/S+.N.S+/S+',
-				mediaUrl:
-					'/data/media/alankars/24573f81-96e8-4456-8646-0f2b4328e435/2d1fa966-f5c3-4c34-8bbb-8d2658d6e9c0.mp4'
+				id: '15',
+				aaroh: 'S.R.S.N-.S/R.G.R.S.R/G.M.G.R.G/M.P.M.G.M/P.D.P.M.P/D.N.D.P.D/N.S.N.D.N/S+.R+.S+.N.S+',
+				avroh: 'S+.N.S+.R+.S+/N.D.N.S+.N/D.P.D.N.D/P.M.P.D.P/M.G.M.P.M/G.R.G.M.G/R.S.R.G.R/S.N-.S.R.S',
+				mediaUrl: '/data/media/alankars/24573f81-96e8-4456-8646-0f2b4328e435/64443ac2-5e7c-4d16-933f-ca35a3fe763f.mp4'
+			},
+			{
+				id: '16',
+				aaroh: 'S.G.S.D-.S/R.M.R.N-.R/G.P.G.S.G/M.D.M.R.M/P.N.P.G.P/D.S+.D.M.D/N.R+.N.P.N/S+.G+.S+.D.S+',
+				avroh: 'S+.D.S+.G+.S+/N.P.N.R+.N/D.M.D.S+.D/P.G.P.N.P/M.R.M.D.M/G.S.G.P.G/R.N-.R.M.R/S.D-.S.G.S',
+				mediaUrl: '/data/media/alankars/24573f81-96e8-4456-8646-0f2b4328e435/4e062230-829f-4976-96bb-ad3ec4d3077b.mp4'
 			}
 		]
 	}

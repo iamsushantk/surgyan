@@ -1,18 +1,20 @@
 <script>
+	import Div from './Div.svelte';
+
 	export let type;
 	export let pattern;
 	const swarGroups = pattern.split('/') || [];
 </script>
 
-<div class="flex gap-1 border-solid border-4 border-indigo-700">
-	<div class="type p-1 flex bg-indigo-800 text-white font-bold place-items-center">
+<Div className={'flex gap-1 border-solid border-4 border-pink-500'}>
+	<Div className={'type p-1 flex bg-pink-600 text-white font-bold place-items-center'}>
 		{type}
-	</div>
-	<div class="p-1 flex w-full flex-wrap gap-1">
+	</Div>
+	<Div className={'p-1 flex w-full flex-wrap gap-1'}>
 		{#each swarGroups as swarGroup}
-			<div class="p-0.5 grow border-solid border-2 border-indigo-300 text-center">
+			<Div className={'p-0.5 grow border-solid border-2 border-pink-300 text-center'}>
 				{swarGroup}
-			</div>
+			</Div>
 		{/each}
-	</div>
-</div>
+	</Div>
+</Div>
