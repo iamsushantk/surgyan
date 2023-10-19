@@ -145,7 +145,7 @@ const lessons = [
 				id: '16',
 				aaroh: 'S.G.S.D-.S/R.M.R.N-.R/G.P.G.S.G/M.D.M.R.M/P.N.P.G.P/D.S+.D.M.D/N.R+.N.P.N/S+.G+.S+.D.S+',
 				avroh: 'S+.D.S+.G+.S+/N.P.N.R+.N/D.M.D.S+.D/P.G.P.N.P/M.R.M.D.M/G.S.G.P.G/R.N-.R.M.R/S.D-.S.G.S',
-				mediaUrl: '/data/media/alankars/24573f81-96e8-4456-8646-0f2b4328e435/4e062230-829f-4976-96bb-ad3ec4d3077b.mp4'
+				mediaUrl: ''
 			}
 		]
 	}
