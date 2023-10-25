@@ -9,7 +9,7 @@
 	let lessons = [];
 
 	onMount(async () => {
-		lessons = (await axios.get(`${Constants.baseUrl}/lessons.json`))?.data || [];
+		lessons = (await axios.get(`${Constants.dbBaseUrl}/lessons.json`))?.data || [];
 	});
 </script>
 

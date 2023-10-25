@@ -7,7 +7,7 @@
 	import Section from './Section.svelte';
 	import SwarSequence from './SwarSequence.svelte';
 
-	$: mediaUrl = `${Constants.baseUrl}/${alankar.mediaUrl}`;
+	$: mediaUrl = `${Constants.dbBaseUrl}/${alankar.mediaUrl}`;
 </script>
 
 <Section className={'flex gap-2 flex-col border-solid border-0 border-pink-600'}>
