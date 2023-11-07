@@ -12,7 +12,7 @@
 	</Section>
 	<Section className={'p-1 flex w-full flex-wrap gap-1'}>
 		{#each swarGroups as swarGroup}
-			<Section className={'p-0.5 grow bg-pink-200 text-center'}>
+			<Section className={'p-0.5 grow bg-pink-200 text-center border-solid border-2 border-pink-600'}>
 				{swarGroup}
 			</Section>
 		{/each}
