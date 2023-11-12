@@ -3,18 +3,21 @@
 	import { onMount } from 'svelte';
 
 	import Constants from '../constants';
-	import Lesson from './Lesson.svelte';
-	import Section from './Section.svelte';
 
-	let lessons = [];
+	let alankarLessons = [];
 
 	onMount(async () => {
-		lessons = (await axios.get(`${Constants.dbBaseUrl}/lessons.json`))?.data || [];
+		alankarLessons = (await axios.get(`${Constants.dbBaseUrl}/alankars.json`))?.data || [];
 	});
 </script>
 
-<Section className={'flex flex-col gap-6 p-2'}>
-	{#each lessons as lesson}
-		<Lesson {lesson} />
+<div class="d-flex gap-3 m-2 flex-wrap">
+	{#each alankarLessons as alankarLesson}
+		<div class="card flex-grow-1">
+			<div class="card-header">{alankarLesson.name}</div>
+			<div class="card-body">
+				<a href={`/lessons/alankars/${alankarLesson.id}`} class="btn btn-primary">Go to Lesson</a>
+			</div>
+		</div>
 	{/each}
-</Section>
+</div>
