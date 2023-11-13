@@ -21,7 +21,7 @@
 	};
 </script>
 
-<section class="input-group d-flex justify-content-center">
+<section class="input-group">
 	<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
 		<span>Choose Scale</span>
 	</button>
