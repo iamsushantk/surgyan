@@ -1,5 +1,1 @@
-export const load = ({ params }) => {
-	return {
-		slug: params.slug
-	};
-};
+export const load = ({ params }) => ({ slug: params.slug });

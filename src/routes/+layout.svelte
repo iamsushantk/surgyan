@@ -6,13 +6,6 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 	<section class="container-fluid">
 		<a class="navbar-brand" href="/">surgyan</a>
-		<div class="navbar-collapse">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link active" href="/">Home</a>
-				</li>
-			</ul>
-		</div>
 	</section>
 </nav>
 <section class="p-2">
