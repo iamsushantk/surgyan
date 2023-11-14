@@ -33,8 +33,3 @@
 	</section>
 	<slot />
 </main>
-<footer>
-	<nav class="navbar fixed-bottom navbar-dark bg-dark">
-		<section class="container-fluid" />
-	</nav>
-</footer>
