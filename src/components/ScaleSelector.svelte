@@ -1,59 +1,62 @@
 <script>
 	import axios from 'axios';
 	import { onMount } from 'svelte';
-
+	import Icon from './Icon.svelte';
 	import Constants from '../constants';
-	import FontIcon from './FontIcon.svelte';
 
 	let scales = [];
 	let activeScale = null;
 	let audioControl = null;
-	let isAudioPlaying = false;
+	let audioIsPlaying = false;
 
 	onMount(async () => {
-		audioControl.onpause = () => (isAudioPlaying = false);
-		audioControl.onplaying = () => (isAudioPlaying = true);
+		audioControl.onpause = () => (audioIsPlaying = false);
+		audioControl.onplaying = () => (audioIsPlaying = true);
 		scales = (await axios.get(`${Constants.dbBaseUrl}/tanpura-scales.json`))?.data || [];
 	});
 
-	const onAudioActivated = () => {
-		!isAudioPlaying ? audioControl?.play() : audioControl?.pause();
+	const onAudioClick = () => {
+		!audioIsPlaying ? audioControl.play() : audioControl.pause();
+	};
+
+	const onScaleSelect = (scale) => {
+		activeScale = scale;
+		audioIsPlaying = false;
 	};
 </script>
 
 <section class="input-group">
-	<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-		<span>Choose Scale</span>
+	<button
+		data-bs-toggle="dropdown"
+		class="btn btn-primary dropdown-toggle"
+	>
+		{!activeScale ? 'Choose scale' : 'Change Scale'}
 	</button>
 	<ul class="dropdown-menu">
 		{#each scales as scale}
 			<li>
 				<a
 					class="dropdown-item"
-					on:click={() => {
-						activeScale = scale;
-						isAudioPlaying = false;
-					}}>{scale.name}</a
+					on:click={() => onScaleSelect(scale)}
 				>
+					{scale.name}
+				</a>
 			</li>
 		{/each}
 	</ul>
-	<span class="input-group-text">{activeScale?.name ?? '-'}</span>
+	<span class="input-group-text">
+		{activeScale ? `Scale ${activeScale.name} selected` : '-'}
+	</span>
 	<button
-		class="btn btn-outline-primary"
-		class:invisible={!activeScale}
+		on:click={onAudioClick}
 		class:disabled={!activeScale}
-		on:click={onAudioActivated}><FontIcon name={!isAudioPlaying ? 'play' : 'pause'} /></button
+		class="btn btn-outline-primary"
 	>
+		<Icon name={!audioIsPlaying ? 'play' : 'pause'} />
+	</button>
 	<audio
 		bind:this={audioControl}
 		class="form-control"
 		src={`${Constants.dbBaseUrl}/${activeScale?.mediaUrl}`}
 	/>
 </section>
-
-<style>
-	audio {
-		border: 1px solid red;
-	}
-</style>

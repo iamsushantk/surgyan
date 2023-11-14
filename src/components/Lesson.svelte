@@ -1,13 +1,33 @@
 <script>
-	import Section from './Section.svelte';
 	import Alankar from './Alankar.svelte';
 
 	export let lesson;
 </script>
 
-<Section className={'flex gap-2 border-pink-600 flex-col'}>
-	<Section className={'p-2 font-bold text-center rounded-t bg-pink-800 text-white'}>{lesson.name}</Section>
-	{#each lesson.alankars as alankar}
-		<Alankar {alankar} />
+<section
+	class="accordion accordion-flush"
+	id="flushAccordion"
+>
+	{#each lesson.alankars as alankar (alankar.id)}
+		<div class="accordion-item">
+			<h2 class="accordion-header">
+				<button
+					class="accordion-button collapsed"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target={`#alankar-${alankar.id}`}
+				>
+					Alankar #{alankar.id}
+				</button>
+			</h2>
+			<div
+				id={`alankar-${alankar.id}`}
+				class="accordion-collapse collapse"
+			>
+				<div class="accordion-body">
+					<Alankar {alankar} />
+				</div>
+			</div>
+		</div>
 	{/each}
-</Section>
+</section>

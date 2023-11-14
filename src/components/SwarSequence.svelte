@@ -1,20 +1,19 @@
 <script>
-	import Section from './Section.svelte';
-
 	export let type;
 	export let pattern;
 	const swarGroups = pattern.split('/') || [];
 </script>
 
-<Section className={'flex gap-1 border-solid border-2 border-pink-500'}>
-	<Section className={'type p-1 flex bg-pink-600 text-white font-bold place-items-center'}>
-		{type}
-	</Section>
-	<Section className={'p-1 flex w-full flex-wrap gap-1'}>
-		{#each swarGroups as swarGroup}
-			<Section className={'p-0.5 grow bg-pink-200 text-center border-solid border-2 border-pink-600'}>
-				{swarGroup}
-			</Section>
-		{/each}
-	</Section>
-</Section>
+<div class="card mt-2">
+	<div class="card-header">{type}</div>
+	<div class="card-body">
+		<div class="list-group d-flex flex-row flex-wrap gap-2">
+			{#each swarGroups as swarGroup}
+				<span
+					type="button"
+					class="btn btn-primary flex-grow-1 my-2">{swarGroup}</span
+				>
+			{/each}
+		</div>
+	</div>
+</div>
