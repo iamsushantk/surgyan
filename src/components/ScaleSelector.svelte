@@ -25,7 +25,7 @@
 	};
 </script>
 
-<section class="input-group">
+<div class="input-group">
 	<button
 		data-bs-toggle="dropdown"
 		class="btn btn-primary dropdown-toggle"
@@ -59,4 +59,4 @@
 		class="form-control"
 		src={`${Constants.dbBaseUrl}/${activeScale?.mediaUrl}`}
 	/>
-</section>
+</div>

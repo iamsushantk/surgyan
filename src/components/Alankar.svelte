@@ -7,9 +7,9 @@
 	$: mediaUrl = `${Constants.dbBaseUrl}/${alankar.mediaUrl}`;
 </script>
 
-<section>
+<div class="d-flex flex-column gap-2">
 	{#if alankar.mediaUrl}
-		<div class="card mb-2">
+		<div class="card">
 			<div class="card-header">Audio Recording</div>
 			<div class="card-body">
 				<audio
@@ -28,4 +28,4 @@
 		type="Avroh"
 		pattern={alankar.avroh}
 	/>
-</section>
+</div>

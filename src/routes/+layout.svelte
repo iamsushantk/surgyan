@@ -17,19 +17,19 @@
 
 <header>
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-		<section class="container-fluid">
+		<div class="container-fluid">
 			<a
 				href="/"
 				class="navbar-brand"
 			>
-				surgyan
+				SurGyan
 			</a>
-		</section>
+		</div>
 	</nav>
 </header>
 <main>
-	<section class="p-2 border-bottom">
+	<div class="p-2 border-bottom">
 		<ScaleSelector />
-	</section>
+	</div>
 	<slot />
 </main>

@@ -4,10 +4,11 @@
 	export let lesson;
 </script>
 
-<section
+<div
 	class="accordion accordion-flush"
 	id="flushAccordion"
 >
+	<div class="bg-primary text-white text-center p-2 mt-2">{lesson.name}</div>
 	{#each lesson.alankars as alankar (alankar.id)}
 		<div class="accordion-item">
 			<h2 class="accordion-header">
@@ -17,7 +18,7 @@
 					data-bs-toggle="collapse"
 					data-bs-target={`#alankar-${alankar.id}`}
 				>
-					Alankar #{alankar.id}
+					#{alankar.id}
 				</button>
 			</h2>
 			<div
@@ -30,4 +31,4 @@
 			</div>
 		</div>
 	{/each}
-</section>
+</div>

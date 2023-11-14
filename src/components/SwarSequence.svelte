@@ -4,7 +4,7 @@
 	const swarGroups = pattern.split('/') || [];
 </script>
 
-<div class="card mt-2">
+<div class="card">
 	<div class="card-header">{type}</div>
 	<div class="card-body">
 		<div class="list-group d-flex flex-row flex-wrap gap-2">
